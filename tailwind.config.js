@@ -2,7 +2,18 @@
 module.exports = {
   content: ['./public/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      spacing:{
+        13: '3.25rem',
+      },
+      fontFamily: {
+        manrope: ['Manrope']
+      },
+      colors: {
+        wpu: '#bada55',
+        kopi: '#c0ffee'
+      },
+    },
   },
   plugins: [],
 }

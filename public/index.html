@@ -3,12 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=Poppins&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Coba Tailwind</title>
+	<title>Belajar TailwindCSS </title>
+	<style type="text/css">
+/*		* {
+			border: 1px solid red;
+		}*/
+	</style>
+	
 </head>
 <body>
-	<h1 class="text-5xl font-bold text-blue-600">Hello World</h1>
-	<a href="#" class="bg-green-400 p-3 text-white inline-block m-3 rounded shadow hover:bg-green-700">Ini Tombol</a>
-	<p class="m-3 bg-red-200">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Neque est quibusdam a autem. Officia modi quas earum eveniet, neque suscipit accusantium itaque nam accusamus repellendus sed numquam. Quidem, ea fugiat maiores facilis magni totam soluta et impedit voluptatum facere nam est deleniti esse reiciendis debitis sunt aperiam voluptas minus, tempore.</p>
+	<h1 class="text-6xl text-bold text-center my-10">Sizing & <span class="bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent">Spacing</span></h1>
+
+	<section class="mb-10 bg-gradient-to-r from-blue-200 via-red-400 to-indigo-500">
+		<h2 class="text-3xl text-center">Spacing</h2>
+			<!-- Memberikan jarak pada elemen, baik didalam maupun diluar -->
+
+			<div class="m-13 bg-wpu">Margin</div>
+			<!-- Margin Memiliki nilai minus dan auta agar elemen berada ditengah -->
+			<div class="p-8 bg-red-100">Padding</div>
+
+	</section>
+	<section class="mb-10 bg-green-200">
+		<h2 class="text-3xl text-center">Sizing</h2>
+
+		<div class="w-32 h-32 bg-kopi">Kotak  1</div>
+		<!-- gunakan / (per) untuk persen (%) -->
+	</section>
+
+	<section class="mb-10 font-manrope max-w-3xl m-auto px-2">
+		<h2 class="mb-4 text-4xl font-bold">Typography</h2>
+		<div class="mb-4 text-lg text-gray-500">By Meizaluna Wulandari, 1 Februari 2023</div>
+		<p class="mb-4">Lorem, ipsum dolor sit amet <a href="#" class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit. Omnis atque eum eos, dolores ab laborum vel perspiciatis molestiae neque, possimus repudiandae harum, libero voluptate, provident. Rerum, laborum nemo provident ullam animi quo dolorem harum quos doloremque porro culpa voluptate atque.</p>
+		<blockquote class="mb-4 italic font-thin  ">
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, inventore possimus natus beatae praesentium labore laborum earum cum unde exercitationem perspiciatis doloribus reiciendis, eius dicta facere quam autem! Ducimus tempore aut delectus, adipisci sit."
+		</blockquote>
+		<p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae voluptate perferendis perspiciatis officiis. Doloremque fugit ab, omnis non, provident ducimus at nemo blanditiis, soluta laboriosam quas neque eligendi magni est temporibus praesentium. Deleniti voluptates quam, temporibus rem animi ut delectus ab quos, quas debitis dolores odit, architecto. Dolore voluptatum, iste!</p>
+	</section>
+
+
 </body>
 </html>
