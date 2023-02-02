@@ -1,11 +1,0 @@
---2023-02-01 21:15:18--  https://images.unsplash.com/photo-1569021998480-a68f22f6ba86?crop=entropy
-Resolving images.unsplash.com (images.unsplash.com)... 199.232.46.208, 2a04:4e42:48::720
-Connecting to images.unsplash.com (images.unsplash.com)|199.232.46.208|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1062383 (1,0M) [image/jpeg]
-Saving to: ‘photo-1569021998480-a68f22f6ba86?crop=entropy’
-
-          photo-156   0%[                    ]       0  --.-KB/s                        photo-1569  10%[=>                  ] 104,00K   433KB/s                       photo-15690  19%[==>                 ] 200,00K   434KB/s                      photo-156902  29%[====>               ] 305,81K   459KB/s                     photo-1569021  40%[=======>            ] 417,81K   459KB/s                    photo-15690219  47%[========>           ] 497,81K   401KB/s                   photo-156902199  54%[=========>          ] 561,81K   388KB/s                  photo-1569021998  61%[===========>        ] 641,81K   374KB/s                 photo-15690219984  68%[============>       ] 705,81K   366KB/s                photo-156902199848  74%[=============>      ] 769,81K   360KB/s               photo-1569021998480  82%[===============>    ] 860,81K   365KB/s               hoto-1569021998480-  95%[==================> ] 988,81K   380KB/s               photo-1569021998480 100%[===================>]   1,01M   397KB/s    in 2,6s    
-
-2023-02-01 21:15:21 (397 KB/s) - ‘photo-1569021998480-a68f22f6ba86?crop=entropy’ saved [1062383/1062383]
-
