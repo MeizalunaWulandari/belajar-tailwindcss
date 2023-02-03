@@ -4,3 +4,5 @@
 >[] untuk arbitrary value / nilai sembarang <br>
 
 >Jika ingin membuat transisi keluar dari elementnya gunakan group<br>
+
+>Untuk memberikan nilai minus berikan tanda - sebelum nama class `-top-0`<br>
