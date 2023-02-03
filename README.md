@@ -3,3 +3,4 @@
 
 >[] untuk arbitrary value / nilai sembarang <br>
 
+>Jika ingin membuat transisi keluar dari elementnya gunakan group<br>
