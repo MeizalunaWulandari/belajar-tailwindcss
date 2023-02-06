@@ -1,6 +1,6 @@
-/*
-! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
-*/
+/* `base` style utama yang menjadi dasar/default dari tailwind  */
+
+/* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com  */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -419,6 +419,13 @@ video {
   display: none;
 }
 
+h1 {
+  font-size: 3.75rem;
+  line-height: 1;
+  /* `theme()` digunakan pada saat kita ingin menggunakan nilai yang kita buat pada varibale theme (tailwind.config.js) */
+  color: #bada55;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -546,6 +553,58 @@ video {
     max-width: 1536px;
   }
 }
+
+.grid-card {
+  /* `@apply` digunakan ketika kita ingin memasukann class utility milik tailwind kedalam custom css kita secara inline */
+  /* `group` tidak bisa dimasukan kedalam `@apply` */
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.grid-card:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    aspect-ratio: 3/4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-card {
+    aspect-ratio: 4/3;
+  }
+}
+
+.grid-card-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.group:hover .grid-card-image {
+  --tw-rotate: 12deg;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* `utilities` tailwind akan memasukan class utility yang kita gunakan */
 
 .invisible {
   visibility: hidden;
@@ -730,10 +789,6 @@ video {
   height: 2.5rem;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
 .w-32 {
   width: 8rem;
 }
@@ -764,10 +819,6 @@ video {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .max-w-3xl {
@@ -964,29 +1015,8 @@ video {
   background-color: rgb(251 207 232 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\/img\/background\.jpg\'\)\] {
-  background-image: url('/img/background.jpg');
-}
-
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/1024x768\?human\'\)\] {
-  background-image: url('https://source.unsplash.com/1024x768?human');
-}
-
-.bg-\[url\(\'url\(\'https\:\/\/source\.unsplash\.com\/1000x600\?keyboard\'\)\'\)\] {
-  background-image: url('url('https://source.unsplash.com/1000x600?keyboard')');
-}
-
-.bg-\[url\(\'url\(https\:\/\/source\.unsplash\.com\/1000x600\?keyboard\'\)\] {
-  background-image: url('url(https://source.unsplash.com/1000x600?keyboard');
 }
 
 .bg-\[url\(\'https\:\/\/source\.unsplash\.com\/1024x768\?the-asteroid\'\)\] {
@@ -1021,8 +1051,8 @@ video {
   background-image: url('https://source.unsplash.com/1024x768?the-fighter');
 }
 
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/1024x768\?the-girl-smiling\'\)\] {
-  background-image: url('https://source.unsplash.com/1024x768?the-girl-smiling');
+.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/1024x768\?the-haters\'\)\] {
+  background-image: url('https://source.unsplash.com/1024x768?the-haters');
 }
 
 .bg-\[url\(\'https\:\/\/source\.unsplash\.com\/1024x768\?the-crush\'\)\] {
@@ -1056,10 +1086,6 @@ video {
 
 .bg-contain {
   background-size: contain;
-}
-
-.bg-cover {
-  background-size: cover;
 }
 
 .bg-fixed {
@@ -1291,24 +1317,23 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-1000 {
   transition-duration: 1000ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
 }
 
 #toggle:checked ~ label div.toggle-circle {
   --tw-translate-x: 0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
+/*@layer base{
+	h1 {
+		font-size: 10rem;
+	}
+}
+*/
+
+/* `@layer` digunakan ketika kita ingin memodifikasi bawaan tailwind */
 
 .first-letter\:float-left::first-letter {
   float: left;
@@ -1418,12 +1443,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:scale-95:hover {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity));
@@ -1488,17 +1507,6 @@ video {
 
 .group:hover .group-hover\:rotate-180 {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:rotate-12 {
-  --tw-rotate: 12deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1602,10 +1610,6 @@ video {
     display: flex;
   }
 
-  .md\:aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-  }
-
   .md\:w-80 {
     width: 20rem;
   }
@@ -1616,11 +1620,6 @@ video {
 
   .md\:self-end {
     align-self: flex-end;
-  }
-
-  .md\:bg-red-100 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(254 226 226 / var(--tw-bg-opacity));
   }
 
   .md\:p-4 {
@@ -1637,10 +1636,6 @@ video {
     display: none;
   }
 
-  .lg\:aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-  }
-
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1655,11 +1650,6 @@ video {
 
   .lg\:flex-1 {
     flex: 1 1 0%;
-  }
-
-  .lg\:bg-green-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(34 197 94 / var(--tw-bg-opacity));
   }
 
   .lg\:p-0 {
